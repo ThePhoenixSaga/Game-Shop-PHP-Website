@@ -1,0 +1,352 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+body{
+	background-color: #282828;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+	background-color: #3E3E3E;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+#username {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	background-color: #515151;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	background-color: #C2C3C2;
+	padding: 10px;
+	box-sizing: border-box;
+}
+#nav
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #ECEDEC; 
+}
+/*Navigation style*/
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+		
+}
+ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+		border-right: none;
+		border-bottom: 1px solid black;
+		margin: 0 3px;
+		
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #222222; color: white;}
+ul.topnav li a.active {background-color: #111; color: white;}
+ul.topnav li.right, 
+ul.topnav li {float: none;}
+
+#body {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	background-color: #515151;
+	padding: 10px;
+	box-sizing: border-box;
+}
+#innerBody {
+	clear: both;
+	float: left;
+	max-width: 270px;
+	display: inline-block;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: auto;
+	text-align:center
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: black;
+	background-color: #C9CAC9;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+input[type=text], [type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #101010;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #252525;
+}
+
+.status-available{color:#9f9;}
+.status-not-available{color:#f99;}
+
+table, th, tr{
+	border: solid 1px;
+	color:white;
+	text-align:left;
+	border-collapse: collapes;
+	
+}
+
+tr:nth-child(even){
+	background-color: #3B3B3B;
+}
+
+tr:hover{
+	background-color: #2B2B2B;
+}
+
+td{
+	width: 150px;
+	border: 1px solid white;
+	padding: 10px 10px;
+}
+
+th {
+	padding: 10px 0;
+	text-align:center;
+	background-color: #282828;
+}
+
+#button {
+    background-color: #C2C3C2;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 1px;
+    cursor: pointer;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#username {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#nav
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#body {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#innerBody {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+	
+	ul.topnav li a {
+		border-right: none;
+		border-bottom: 1px solid black;
+		margin: 0 3px;
+		
+}
+	
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+#logo {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#username {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#nav
+{
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+/*Navigation style*/
+ul.topnav li {float: left;}
+ul.topnav li.right {float: right;}
+	
+#body {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#innerBody {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+	
+ul.topnav li a {
+		border-right: 1px solid black;
+		border-bottom: none;
+		margin: 3px 0;
+		
+}
+	
+}
